@@ -5,7 +5,7 @@ public class TicTacToe {
 
 	private final char EMPTY = '-';
 	private final char X_Player = 'X';
-	private final char Y_Player = 'Y';
+	private final char O_Player = 'O';
 	
 	private char[] theGrid;
 
@@ -19,6 +19,10 @@ public class TicTacToe {
 		for (int i = 0; i < SIZE; i++) {
 			theGrid[i] = EMPTY;
 		}
+	}
+
+	public char getAt(int i) {
+		return theGrid[i];
 	}
 
 	public Boolean isEmpty() {

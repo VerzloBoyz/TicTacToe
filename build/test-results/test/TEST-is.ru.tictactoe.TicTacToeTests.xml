@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-10-27T18:00:03" hostname="clients-pool-1.nat.ru.is" time="0.001">
+<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-10-27T18:15:00" hostname="clients-pool-1.nat.ru.is" time="0.001">
   <properties/>
-  <testcase name="GridTest" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
-  <testcase name="ConstructorTest" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
+  <testcase name="testGridIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
+  <testcase name="testCharIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
+  <testcase name="testGridSize" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
