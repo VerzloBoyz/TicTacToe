@@ -17,6 +17,7 @@ public class ConsoleInterface {
 	}
 
 	private void greeting() {
+		System.out.println();
 		System.out.println("Welcome to Tic Tac Toe.");
         System.out.println("Player 1 is X");
         System.out.println("Player 2 is O");
@@ -42,18 +43,26 @@ public class ConsoleInterface {
 			choice = scanner.nextInt() - 1;
 		}
 
-		if(game.checkWinner() == 'X' || game.checkWinner() == 'O') {
-			printGrid();
-			System.out.println(game.checkWinner() + " HAS WON!");
-			return;
-		} else if (game.checkWinner() == '+') {
-			printGrid();
-			System.out.println("It's a draw");
+		if(gameEnd()) {
 			return;
 		}
 
 		printGrid();
 		getInput();
+	}
+
+	private Boolean gameEnd() {
+		if(game.checkWinner() == 'X' || game.checkWinner() == 'O') {
+			printGrid();
+			System.out.println(game.checkWinner() + " HAS WON!");
+			return true;
+		} else if (game.checkWinner() == '+') {
+			printGrid();
+			System.out.println("It's a draw");
+			return true;
+		}
+
+		return false;
 	}
 
 	public static void main(String args[]) {
