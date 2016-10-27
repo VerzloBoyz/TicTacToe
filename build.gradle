@@ -34,3 +34,6 @@ dependencies {
     testCompile 'junit:junit:4.+'
 }
  
+run {
+    standardInput = System.in
+}
