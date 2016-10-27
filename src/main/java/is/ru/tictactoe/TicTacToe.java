@@ -131,6 +131,12 @@ public class TicTacToe {
 	public int getSize() {
 		return SIZE;
 	}
+
+	public String getPlayer() {
+		if (playerX) return "Player 1";
+
+		return "Player 2";
+	}
 	
 	public static void main(String args[]) {
 		TicTacToe testClass = new TicTacToe();
