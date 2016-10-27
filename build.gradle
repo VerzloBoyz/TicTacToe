@@ -13,7 +13,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "is.ru.tictactoe.TicTacToe"
+mainClassName = "is.ru.tictactoe.ConsoleInterface"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -34,3 +34,6 @@ dependencies {
     testCompile 'junit:junit:4.+'
 }
  
+run {
+    standardInput = System.in
+}
