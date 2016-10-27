@@ -23,9 +23,7 @@ public class TicTacToe {
 
 	public Boolean isEmpty() {
 		for (char c : theGrid) {
-			if (c != '-') {
-				return false;
-			}
+			if (c != EMPTY) return false;
 		}
 
 		return true;
