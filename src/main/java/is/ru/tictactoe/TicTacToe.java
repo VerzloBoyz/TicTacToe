@@ -16,9 +16,19 @@ public class TicTacToe {
 	private void initialize() {
 		theGrid = new char[SIZE];
 
-		for (char x : theGrid) {
-			x = EMPTY;
+		for (int i = 0; i < SIZE; i++) {
+			theGrid[i] = EMPTY;
 		}
+	}
+
+	public Boolean isEmpty() {
+		for (char c : theGrid) {
+			if (c != '-') {
+				return false;
+			}
+		}
+
+		return true;
 	}
 
 	public int getSize() {
@@ -26,7 +36,7 @@ public class TicTacToe {
 	}
 	
 	public static void main(String args[]) {
-		System.out.println("Tic Tac Toe");
-		System.exit(0);
+		TicTacToe testClass = new TicTacToe();
+		System.out.print(testClass.isEmpty());
 	}
 }
