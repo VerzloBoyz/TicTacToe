@@ -38,6 +38,58 @@ public class TicTacToe {
 		return true;
 	}
 
+	public char checkWinner() {
+		if (theGrid[0] == X_Player && theGrid[3] == X_Player && theGrid[6] == X_Player)
+			return X_Player;
+
+		if (theGrid[1] == X_Player && theGrid[4] == X_Player && theGrid[7] == X_Player)
+			return X_Player;
+
+		if (theGrid[2] == X_Player && theGrid[5] == X_Player && theGrid[8] == X_Player)
+			return X_Player;
+
+		if (theGrid[0] == X_Player && theGrid[1] == X_Player && theGrid[2] == X_Player)
+			return X_Player;
+
+		if (theGrid[3] == X_Player && theGrid[4] == X_Player && theGrid[5] == X_Player)
+			return X_Player;
+
+		if (theGrid[6] == X_Player && theGrid[7] == X_Player && theGrid[8] == X_Player)
+			return X_Player;
+
+		if (theGrid[0] == X_Player && theGrid[4] == X_Player && theGrid[8] == X_Player)
+			return X_Player;
+
+		if (theGrid[2] == X_Player && theGrid[4] == X_Player && theGrid[6] == X_Player)
+			return X_Player;
+
+		if (theGrid[0] == O_Player && theGrid[3] == O_Player && theGrid[6] == O_Player)
+			return O_Player;
+
+		if (theGrid[1] == O_Player && theGrid[4] == O_Player && theGrid[7] == O_Player)
+			return O_Player;
+
+		if (theGrid[2] == O_Player && theGrid[5] == O_Player && theGrid[8] == O_Player)
+			return O_Player;
+
+		if (theGrid[0] == O_Player && theGrid[1] == O_Player && theGrid[2] == O_Player)
+			return O_Player;
+
+		if (theGrid[3] == O_Player && theGrid[4] == O_Player && theGrid[5] == O_Player)
+			return O_Player;
+
+		if (theGrid[6] == O_Player && theGrid[7] == O_Player && theGrid[8] == O_Player)
+			return O_Player;
+
+		if (theGrid[0] == O_Player && theGrid[4] == O_Player && theGrid[8] == O_Player)
+			return O_Player;
+
+		if (theGrid[2] == O_Player && theGrid[4] == O_Player && theGrid[6] == O_Player)
+			return O_Player;
+
+		return '-';
+	}
+
 	private Boolean checkLegalInsert(int i) {
 		if (i < 0 || i > SIZE)
 			return false;

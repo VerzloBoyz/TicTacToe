@@ -37,4 +37,17 @@ public class TicTacToeTests {
 		assertTrue(testClass.insertAt(4));
 		assertFalse(testClass.insertAt(20));
 	}
+
+	@Test
+	public void testCheckWinner() {
+		TicTacToe testClass = new TicTacToe();
+
+		testClass.insertAt(0); // X
+		testClass.insertAt(1); // O
+		testClass.insertAt(3); // X
+		testClass.insertAt(2); // O
+		testClass.insertAt(6); // X
+
+		assertEquals('X', testClass.checkWinner());
+	}
 }
