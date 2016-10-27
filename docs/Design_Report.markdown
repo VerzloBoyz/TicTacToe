@@ -1,1 +1,4 @@
-Test **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
+
+## Design Report
+
+#### This report describes the design behind the *setup* and *execution* for the game Tic Tac Toe.
