@@ -2,12 +2,13 @@ package is.ru.tictactoe;
 
 public class TicTacToe {
 	private final int SIZE = 9;
-
-	private final char EMPTY = '-';
+	private final String EMPTY = "123456789";
 	private final char X_Player = 'X';
 	private final char O_Player = 'O';
 	
 	private char[] theGrid;
+
+	private Boolean playerX = true;
 
 	TicTacToe() {
 		initialize();
@@ -16,12 +17,27 @@ public class TicTacToe {
 	private void initialize() {
 		theGrid = new char[SIZE];
 
-		String empty = "123456789";
-		char[] emptyInputs = empty.toCharArray();
+		char[] emptyInputs = EMPTY.toCharArray();
 
 		for (int i = 0; i < SIZE; i++) {
 			theGrid[i] = emptyInputs[i];
 		}
+	}
+
+	public Boolean insertAt(int i) {
+		if (i < 0 || i > SIZE)
+			return false;
+
+		if (theGrid[i] == X_Player || theGrid[i] == O_Player)
+			return false;
+
+		if (playerX)
+			theGrid[i] = X_Player;
+
+		if (!playerX)
+			theGrid[i] = O_Player;
+
+		return true;
 	}
 
 	public char getAt(int i) {

@@ -1,6 +1,8 @@
 package is.ru.tictactoe;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class TicTacToeTests {
@@ -21,16 +23,18 @@ public class TicTacToeTests {
 	public void testCharAtIndex() {
 		TicTacToe testClass = new TicTacToe();
 		assertEquals('6', testClass.getAt(5));
-		assertEquals('8', testClass.getAt(7));
+	}
 
-		Boolean threwEx = false;
+	@Test(expected = IndexOutOfBoundsException.class)
+	public void testCharAtIndexFails() {
+		TicTacToe testClass = new TicTacToe();
+		testClass.getAt(20);
+	}
 
-		try {
-			assertEquals("20", testClass.getAt(20));
-		}
-		catch (IndexOutOfBoundsException ex) {
-			threwEx = true;
-		}
-		assertEquals(true,threwEx);
+	@Test
+	public void testInsertAt() {
+		TicTacToe testClass = new TicTacToe();
+		assertTrue(testClass.insertAt(4));
+		assertFalse(testClass.insertAt(20));
 	}
 }
