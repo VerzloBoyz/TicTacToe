@@ -5,10 +5,13 @@ public class TicTacToe {
 	private final String EMPTY = "123456789";
 	private final char X_Player = 'X';
 	private final char O_Player = 'O';
+	private final char NOBODY_HAS_WON = '-';
+	private final char DRAW = '+';
 	
 	private char[] theGrid;
 
 	private Boolean playerX = true;
+	private int turns = 0;
 
 	TicTacToe() {
 		initialize();
@@ -34,11 +37,15 @@ public class TicTacToe {
 		if (!playerX)
 			theGrid[i] = O_Player;
 
+		turns++;
 		playerX = !playerX;
 		return true;
 	}
 
 	public char checkWinner() {
+		if (turns < 5)
+			return NOBODY_HAS_WON;
+
 		if (theGrid[0] == X_Player && theGrid[3] == X_Player && theGrid[6] == X_Player)
 			return X_Player;
 
@@ -87,7 +94,10 @@ public class TicTacToe {
 		if (theGrid[2] == O_Player && theGrid[4] == O_Player && theGrid[6] == O_Player)
 			return O_Player;
 
-		return '-';
+		if (turns == SIZE)
+			return DRAW;
+
+		return NOBODY_HAS_WON;
 	}
 
 	private Boolean checkLegalInsert(int i) {

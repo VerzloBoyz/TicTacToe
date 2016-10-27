@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-27T19:10:32" hostname="clients-pool-1.nat.ru.is" time="0.004">
+<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-10-27T19:17:13" hostname="clients-pool-1.nat.ru.is" time="0.004">
   <properties/>
-  <testcase name="testGridIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.002"/>
-  <testcase name="testCheckWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
+  <testcase name="testVerticalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.002"/>
+  <testcase name="testGridIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testGridSize" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testInsertAt" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testCharAtIndex" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
-  <testcase name="testCharAtIndexFails" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
+  <testcase name="testCharAtIndexFails" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
+  <testcase name="testHorizontalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

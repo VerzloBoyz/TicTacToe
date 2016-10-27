@@ -39,7 +39,7 @@ public class TicTacToeTests {
 	}
 
 	@Test
-	public void testCheckWinner() {
+	public void testVerticalWinner() {
 		TicTacToe testClass = new TicTacToe();
 
 		testClass.insertAt(0); // X
@@ -47,6 +47,19 @@ public class TicTacToeTests {
 		testClass.insertAt(3); // X
 		testClass.insertAt(2); // O
 		testClass.insertAt(6); // X
+
+		assertEquals('X', testClass.checkWinner());
+	}
+
+	@Test
+	public void testHorizontalWinner() {
+		TicTacToe testClass = new TicTacToe();
+
+		testClass.insertAt(0); // X
+		testClass.insertAt(4); // O
+		testClass.insertAt(1); // X
+		testClass.insertAt(3); // O
+		testClass.insertAt(2); // X
 
 		assertEquals('X', testClass.checkWinner());
 	}
