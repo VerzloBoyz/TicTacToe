@@ -6,6 +6,6 @@ import.org.junit.Test;
 public class InterfaceTests {
 	@Test
 	public void test(){
-	åssertEquals("isWorking", "isWorking");
+	assertEquals("isWorking", "isWorking");
 	}
 }
