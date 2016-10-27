@@ -1,21 +1,25 @@
 package is.ru.tictactoe;
 
 public class TicTacToe {
-	TicTacToe() {
-		theGrid = new int[SIZE];
-
-		for (int g : theGrid) {
-			g = EMPTY;
-		}
-	}
-
 	private final int SIZE = 9;
 
-	private final int EMPTY = 0;
-	private final int X_Player = 1;
-	private final int Y_Player = 2;
+	private final char EMPTY = '-';
+	private final char X_Player = 'X';
+	private final char Y_Player = 'Y';
 	
-	private int[] theGrid;
+	private char[] theGrid;
+
+	TicTacToe() {
+		initialize();
+	}
+
+	private void initialize() {
+		theGrid = new char[SIZE];
+
+		for (char x : theGrid) {
+			x = EMPTY;
+		}
+	}
 
 	public int getSize() {
 		return SIZE;

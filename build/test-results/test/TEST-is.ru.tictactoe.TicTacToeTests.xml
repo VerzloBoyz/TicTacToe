@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-27T17:29:28" hostname="clients-pool-1.nat.ru.is" time="0.001">
+<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-27T17:35:43" hostname="clients-pool-1.nat.ru.is" time="0.001">
   <properties/>
   <testcase name="ConstructorTest" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
