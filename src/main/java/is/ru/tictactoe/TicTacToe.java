@@ -25,10 +25,7 @@ public class TicTacToe {
 	}
 
 	public Boolean insertAt(int i) {
-		if (i < 0 || i > SIZE)
-			return false;
-
-		if (theGrid[i] == X_Player || theGrid[i] == O_Player)
+		if (!checkLegalInsert(i))
 			return false;
 
 		if (playerX)
@@ -36,6 +33,17 @@ public class TicTacToe {
 
 		if (!playerX)
 			theGrid[i] = O_Player;
+
+		playerX = !playerX;
+		return true;
+	}
+
+	private Boolean checkLegalInsert(int i) {
+		if (i < 0 || i > SIZE)
+			return false;
+
+		if (theGrid[i] == X_Player || theGrid[i] == O_Player)
+			return false;
 
 		return true;
 	}
