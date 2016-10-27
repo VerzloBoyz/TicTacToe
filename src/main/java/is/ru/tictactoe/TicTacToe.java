@@ -16,18 +16,27 @@ public class TicTacToe {
 	private void initialize() {
 		theGrid = new char[SIZE];
 
+		String empty = "123456789";
+		char[] emptyInputs = empty.toCharArray();
+
 		for (int i = 0; i < SIZE; i++) {
-			theGrid[i] = EMPTY;
+			theGrid[i] = emptyInputs[i];
 		}
 	}
 
 	public char getAt(int i) {
+		checkOutOfBounds(i);
 		return theGrid[i];
+	}
+
+	private void checkOutOfBounds(int i){
+		if (i < 0 || i > SIZE)
+			throw new IndexOutOfBoundsException();
 	}
 
 	public Boolean isEmpty() {
 		for (char c : theGrid) {
-			if (c != EMPTY) return false;
+			if (c == X_Player || c == O_Player) return false;
 		}
 
 		return true;
