@@ -5,6 +5,9 @@
 ## Description
 This repository contains a solution to the late-term assignment in the course `T-303-HUGB` at Reyjavík University. 
 
+## Running the application
+If you are using OSX you can simply run the script macRun.sh `./macRun.sh`
+
 ## Members
 - Arnór Rafn Gíslason
 - Ármann Ari Árnason
