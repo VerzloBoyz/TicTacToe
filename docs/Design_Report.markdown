@@ -19,3 +19,6 @@
 3. When a user has successfully checked 3 boxes in a row he should be notified that he is the victor.
 4. Users should be notified if there is a draw.
 5. Users should be able to reset the Tic tac toe grid as often as they want if they are playing via web.
+
+## Class Diagram
+![Class Diagram](resources/class_diagram.png)
