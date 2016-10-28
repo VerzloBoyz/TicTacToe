@@ -25,14 +25,20 @@ public class ConsoleInterface {
 	}
 
 	private void printGrid() {
-		System.out.println();
-		System.out.println(game.getAt(0) + "|" + game.getAt(1) + "|" + game.getAt(2));
-		System.out.println("-----");
-		System.out.println(game.getAt(3) + "|" + game.getAt(4) + "|" + game.getAt(5));
-		System.out.println("-----");
-		System.out.println(game.getAt(6) + "|" + game.getAt(7) + "|" + game.getAt(8));
-		System.out.println();
-	}
+        System.out.println();
+		System.out.println("       |       |");
+		System.out.println("   " + game.getAt(0) + "   |   " + game.getAt(1) + "   |   " + game.getAt(2));
+		System.out.println("       |       |");
+        System.out.println("-------|-------|-------");
+		System.out.println("       |       |");
+		System.out.println("   " + game.getAt(3) + "   |   " + game.getAt(4) + "   |   " + game.getAt(5));
+		System.out.println("       |       |");
+		System.out.println("-------|-------|-------");
+		System.out.println("       |       |");
+		System.out.println("   " + game.getAt(6) + "   |   " + game.getAt(7) + "   |   " + game.getAt(8));
+		System.out.println("       |       |");
+	    System.out.println();
+    }
 
 	private void getInput() {
 		System.out.print(game.getPlayer() + ": ");
