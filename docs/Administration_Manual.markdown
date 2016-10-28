@@ -12,6 +12,7 @@ Find which version of Java you have by running `java -version` in a terminal. If
 #### Optional
 
 - [Git](https://git-scm.com/downloads) - if you wish to clone the project from source
+
 ---     
 
 ### Installation
