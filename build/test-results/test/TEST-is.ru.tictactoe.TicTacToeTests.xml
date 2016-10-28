@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-10-28T12:53:52" hostname="Gunnars-MacBook-Pro.local" time="0.003">
+<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-10-28T12:55:00" hostname="Gunnars-MacBook-Pro.local" time="0.004">
   <properties/>
-  <testcase name="testVerticalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
+  <testcase name="testVerticalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.002"/>
   <testcase name="testGridIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
+  <testcase name="testOtherDiagonalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testGridSize" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testInsertAt" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
-  <testcase name="testCharAtIndex" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
+  <testcase name="testCharAtIndex" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testCharAtIndexFails" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testHorizontalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>
   <testcase name="testDiagonalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>

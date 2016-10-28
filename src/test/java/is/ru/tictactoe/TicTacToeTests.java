@@ -77,5 +77,18 @@ public class TicTacToeTests {
 		assertEquals('X', testClass.checkWinner());
 	}
 
+	@Test
+	public void testOtherDiagonalWinner() {
+		TicTacToe testClass = new TicTacToe();
+
+		testClass.insertAt(2); // X
+		testClass.insertAt(5); // O
+		testClass.insertAt(4); // X
+		testClass.insertAt(7); // O
+		testClass.insertAt(6); // X
+
+		assertEquals('X', testClass.checkWinner());
+	}
+
 
 }
