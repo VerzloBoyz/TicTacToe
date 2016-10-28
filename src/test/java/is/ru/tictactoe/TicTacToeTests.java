@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class TicTacToeTests {
-	
+
 	@Test
 	public void testGridSize() {
 		TicTacToe testClass = new TicTacToe();
@@ -63,4 +63,5 @@ public class TicTacToeTests {
 
 		assertEquals('X', testClass.checkWinner());
 	}
+
 }
