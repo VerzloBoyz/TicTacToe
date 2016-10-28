@@ -10,8 +10,8 @@ public class TicTacToe {
 	private final char DRAW = '+';
 
 	private char[] theGrid;
-	private Boolean playerX = true;
-	private int turns = 0;
+	private Boolean playerX;
+	private int turns;
 
 	TicTacToe() {
 		initialize();
@@ -19,12 +19,17 @@ public class TicTacToe {
 
 	private void initialize() {
 		theGrid = new char[SIZE];
-
+		playerX = true;
+		turns = 0;
 		char[] emptyInputs = EMPTY.toCharArray();
-
 		for (int i = 0; i < SIZE; i++) {
 			theGrid[i] = emptyInputs[i];
 		}
+	}
+
+	public Boolean reset(){
+		initialize();
+		return true;
 	}
 
 	public Boolean insertAt(int i) {
