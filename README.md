@@ -6,7 +6,7 @@
 This repository contains a solution to the late-term assignment in the course `T-303-HUGB` at Reyjavík University. 
 
 ## Running the application
-If you are using OSX you can simply run the script macRun.sh `./macRun.sh`
+If you are using OSX you can simply run the script macRun.sh `./macRun.sh` (assuming you have gradle and heroku installed)
 
 ## Members
 - Arnór Rafn Gíslason
