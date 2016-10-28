@@ -1,17 +1,27 @@
 # Administration Manual
 ## Getting started
-### Requirements
-This project requires a recent version of Java and [git](https://git-scm.com/downloads). Find which version of Java you have by running `java -version` in a terminal. If Java isn't installed on your machine you need one of the following Java Development Kits:
 
-*	OpenJDK 7 / OpenJDK 8 - [Download](http://openjdk.java.net/install/)
-*	Java OracleJDK 7 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-*	Java OracleJDK 8 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+### Prerequisites
+
+#### Required
+- Java Runtime Environtment (JRE) 7 or higher
+
+Required in order to run the program.
+Find which version of Java you have by running `java -version` in a terminal. If Java isn't installed on your machine you can download it [here](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+
+#### Optional
+
+- [Git](https://git-scm.com/downloads) - if you wish to clone the project from source
+---     
 
 ### Installation
+#### With Git
 Clone the project:
 ```
 git clone https://github.com/VerzloBoyz/TicTacToe.git && cd TicTacToe
 ```
+#### Without Git
+Download [`TicTacToe-master.zip`](https://github.com/VerzloBoyz/TicTacToe/archive/master.zip) and unzip it with your favorite archive utility.
 ### Running in terminal
 From the directory `TicTacToe (master)` run:
 ```
