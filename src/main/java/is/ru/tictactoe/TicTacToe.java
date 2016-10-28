@@ -1,15 +1,15 @@
 package is.ru.tictactoe;
 
 public class TicTacToe {
+
 	private final int SIZE = 9;
 	private final String EMPTY = "123456789";
 	private final char X_Player = 'X';
 	private final char O_Player = 'O';
 	private final char NOBODY_HAS_WON = '-';
 	private final char DRAW = '+';
-	
-	private char[] theGrid;
 
+	private char[] theGrid;
 	private Boolean playerX = true;
 	private int turns = 0;
 
@@ -124,7 +124,6 @@ public class TicTacToe {
 		for (char c : theGrid) {
 			if (c == X_Player || c == O_Player) return false;
 		}
-
 		return true;
 	}
 
@@ -134,12 +133,11 @@ public class TicTacToe {
 
 	public String getPlayer() {
 		if (playerX) return "Player 1";
-
 		return "Player 2";
 	}
-	
+
 	public static void main(String args[]) {
 		TicTacToe testClass = new TicTacToe();
-		System.out.print(testClass.isEmpty());
+		//do something with the class
 	}
 }
