@@ -1,13 +1,19 @@
-## Administration Manual
-### This manual describes what to do if you want to play the TicTacToe game
-#### For starters you need one of these versions of java to run the game:
-*	open jdk7 - Download: http://openjdk.java.net/install/
-*	java oraclejdk7 - Download: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
-*	java oraclejdk8 - Download: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+# Administration Manual
+## Getting started
+### Requirements
+This project requires a recent version of Java and [git](https://git-scm.com/downloads). Find which version of Java you have by running `java -version` in a terminal. If Java isn't installed on your machine you need one of the following Java Development Kits:
 
-#### You can either run the game as an executable or from your console
-##### To run the game as an executable you need to download the follwing jar file from the root of our GitHub repository
-*	ticTacToe.jar
-	
-##### To run the game on your console you need to download the .jar file from the previous section and run this command in your console
-*   java -cp TicTacToe.jar is.ru.tictactoe.ConsoleInterface
+*	OpenJDK 7 / OpenJDK 8 - [Download](http://openjdk.java.net/install/)
+*	Java OracleJDK 7 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+*	Java OracleJDK 8 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
+### Installation
+Clone the project:
+```
+git clone https://github.com/VerzloBoyz/TicTacToe.git && cd TicTacToe
+```
+### Running in terminal
+From the directory `TicTacToe (master)` run:
+```
+java -cp TicTacToe.jar is.ru.tictactoe.ConsoleInterface
+```
