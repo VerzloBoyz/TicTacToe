@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  color: #FFF;
+  background: cornflowerblue;
+}
+body h1 {
+  font-weight: normal;
+}
+body .turn {
+  margin-bottom: 10px;
+}
+body table {
+  border-collapse: collapse;
+  width: 360px;
+  margin: 0 auto;
+}
+body table td {
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+}
+body table td:before {
+  font-size: 1.5em;
+  line-height: 1;
+}
+body table td.cross:before {
+  content: "X";
+  color: purple;
+}
+body table td.circle:before {
+  content: "O";
+  color: green;
+}
+
+body table:hover{
+  opacity: 0.6;
+}
+
+body .reset {
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  background: cornflowerblue;
+}
+body .reset:hover {
+  opacity: 0.8;
+}
