@@ -2,8 +2,8 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-top: 50px;
-  color: #FFF;
-  background: cornflowerblue;
+  color: cornflowerblue;
+  background: white;
 }
 body h1 {
   font-weight: normal;
@@ -19,33 +19,38 @@ body table {
 body table td {
   width: 120px;
   height: 120px;
-  border: 1px solid white;
+  border: 5px solid white;
+  border-radius: 20px;
   cursor: pointer;
-  color: white;
+  background-color: cornflowerblue;
 }
 body table td:before {
   font-size: 1.5em;
   line-height: 1;
 }
-body table td.cross:before {
+body table td.X:before {
   content: "X";
+  color: orange;
+}
+body table td.O:before {
+  content: "O";
   color: purple;
 }
-body table td.circle:before {
-  content: "O";
-  color: green;
-}
-
-body table:hover{
+body table td:hover{
   opacity: 0.6;
 }
-
-body .reset {
+body .new {
+  border: none;
   padding: 5px 10px;
   color: white;
   cursor: pointer;
-  background: cornflowerblue;
+  background-color: green;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 50px;
+  border-radius: 15px;
 }
-body .reset:hover {
+body .new:hover {
   opacity: 0.8;
 }
