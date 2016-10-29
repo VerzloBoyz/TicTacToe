@@ -13,7 +13,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 mainClassName = "is.ru.tictactoe.WebInterface"
-
+mainClassName = "is.ru.tictactoe.WebInterface"
 repositories {
     jcenter()
 }
