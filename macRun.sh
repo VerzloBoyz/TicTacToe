@@ -6,7 +6,7 @@ read input
 if [ "$input" != "1" ] && [ "$input" != "2" ]; then
     echo "You have insulted us, go home!"
 elif [ "$input" = "1" ]; then
-    perl -i -pe 's/.*/mainClassName = "is.ru.tictactoe.ChuckWeb"/ if $.==16' build.gradle
+    perl -i -pe 's/.*/mainClassName = "is.ru.tictactoe.WebInterface"/ if $.==16' build.gradle
     ./gradlew installDist > /dev/null
     heroku local web &
     open http://localhost:5000

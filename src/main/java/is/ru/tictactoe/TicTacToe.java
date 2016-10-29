@@ -121,7 +121,7 @@ public class TicTacToe {
 	}
 
 	private void checkOutOfBounds(int i){
-		if (i < 0 || i > SIZE)
+		if (i < 0 || i > SIZE - 1)
 			throw new IndexOutOfBoundsException();
 	}
 
