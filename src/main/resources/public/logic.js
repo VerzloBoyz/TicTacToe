@@ -1,28 +1,29 @@
 
 $(function() {
 
-  var player = 1;
+  var playerX = true;
   var table = $('table');
-  var messages = $('.messages');
+  var info = $('.info');
   var turn = $('.turn');
-  displayNextPlayer(turn, player);
+  displayNextPlayer();
 
-  $('.reset').click(function() {
-     messages.html('');
-     player = 1;
+  //new game
+  $('.new').click(function() {
+     info.html('');
+     playerX = true;
      reset(table);
-     displayNextPlayer(turn, player);
+     displayNextPlayer();
    });
 
+  //cell clicked
   $('td').click(function() {
+
     td = $(this);
 
-    var state = getState(td);
-    if(!state) {
-      var pattern = definePatternForCurrentPlayer(player);
-      changeState(td, pattern);
-      player = setNextPlayer(player);
-      }
+    if(!getInfoForCell(td)) {
+      td.addClass(inputForPlayer(playerX))
+      playerX = switchPlayer(playerX);
+    }
 
     $.ajax({
         type: 'POST',
@@ -30,20 +31,21 @@ $(function() {
         data: "id=" + td.attr('id')
     }).done(function(result) {
 
-        displayNextPlayer(turn, player);
+        displayNextPlayer();
 
         $.ajax({
             type: 'POST',
             url: '/checkWinner',
             data: null
         }).done(function(result) {
+
             if (result == 'X' || result == 'O') {
-              messages.html(result + " just won the game. ");
-              $('.turn').html('');
+              info.html(result + " just won the game. ");
+              turn.html("");
             }
             else if (result == '+') {
-              messages.html('Draw!');
-              $('.turn').html('');
+              info.html('Draw!');
+              turn.html("");
             }
 
         }).fail(function(f) {
@@ -52,32 +54,23 @@ $(function() {
     }).fail(function(f) {
     });
   });
-
 });
 
-function getState(td) {
-  if(td.hasClass('cross') || td.hasClass('circle'))return 1;
-  else return 0;
+function getInfoForCell(td) {
+  if(td.hasClass('X') || td.hasClass('O')) return true;
+  else return false;
 }
 
-function changeState(td, pattern) {
-  return td.addClass(pattern);
+function inputForPlayer(playerX) {
+  if(playerX == true) return 'X';
+  else return 'O';
 }
 
-function definePatternForCurrentPlayer(player) {
-  if(player == 1) {
-    return 'cross';
-  } else {
-    return 'circle';
-  }
+function switchPlayer(playerX) {
+  return playerX = !playerX;
 }
 
-function setNextPlayer(player) {
-  if(player == 1) return player = 2;
-  else return player = 1;
-}
-
-function displayNextPlayer(turn, player) {
+function displayNextPlayer() {
 
   $.ajax({
       type: 'POST',
@@ -89,9 +82,11 @@ function displayNextPlayer(turn, player) {
     $('.turn').html(f);
   });
 }
+
+//reset the ui and business logic
 function reset(table) {
   table.find('td').each(function() {
-    $(this).removeClass('circle').removeClass('cross');
+    $(this).removeClass('X').removeClass('O');
   });
 
   $.ajax({
