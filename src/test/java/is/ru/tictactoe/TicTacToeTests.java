@@ -131,18 +131,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    public void testWinnerX() {
-      TicTacToe testClass = new TicTacToe();
-
-      testClass.insertAt(0); // X
-      testClass.insertAt(4); // O
-      testClass.insertAt(3); // X
-      testClass.insertAt(1); // O
-      testClass.insertAt(6); // X
-
-      assertEquals('X', testClass.checkWinner());
-      testClass = null;
-
+    public void testWinnerXSecondCol() {
       TicTacToe testClass = new TicTacToe();
 
       testClass.insertAt(1); // X
@@ -152,7 +141,10 @@ public class TicTacToeTests {
       testClass.insertAt(7); // X
 
       assertEquals('X', testClass.checkWinner());
-      testClass = null;
+    }
+
+    @Test
+    public void testWinnerXThirdCol() {
 
       TicTacToe testClass = new TicTacToe();
 
@@ -163,12 +155,5 @@ public class TicTacToeTests {
       testClass.insertAt(8); // X
 
       assertEquals('X', testClass.checkWinner());
-      testClass = null;
-
-
-    }
-
-
-
-
+    } 
 }
