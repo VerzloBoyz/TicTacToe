@@ -31,7 +31,7 @@ dependencies {
 
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
     seleniumCompile 'junit:junit:4.+'
-    seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
+    //seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
 
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
     seleniumXvfbCompile 'junit:junit:4.+'
