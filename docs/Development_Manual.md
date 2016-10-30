@@ -4,10 +4,7 @@
 ## Prerequisites
 
 - **Java Development Kit** (JDK) 7 or higher
-    - Any of the following will work
-    -   OpenJDK 7 / OpenJDK 8 - [Download](http://openjdk.java.net/install/)
-    - Java OracleJDK 7 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-    - Java OracleJDK 8 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+    - Java OracleJDK 8 - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - **Gradle** - [Download](https://gradle.org/gradle-download)
 
 1. Follow the setup instructions as specified in the [Administration Manual](Administration_Manual.md).

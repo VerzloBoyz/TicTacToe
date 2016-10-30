@@ -4,7 +4,7 @@
 ### Prerequisites
 
 #### Required
-- Java Runtime Environtment (JRE) 7 or higher
+- Java Runtime Environment (JRE) 7 or higher
 
 Required in order to run the program.
 Find which version of Java you have by running `java -version` in a terminal. If Java isn't installed on your machine you can download it [here](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
