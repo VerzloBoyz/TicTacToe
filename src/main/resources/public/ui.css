@@ -2,8 +2,8 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-top: 50px;
-  color: black;
-  background: white;
+  color: white;
+  background: black;
 }
 body h1 {
   font-weight: normal;
