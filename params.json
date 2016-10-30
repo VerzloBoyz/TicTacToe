@@ -1,6 +1,6 @@
 {
   "name": "Tic Tac Toe",
-  "tagline": "A java implementation of Tic Tac Toe for the class Hugbúnaðarfræði.",
+  "tagline": "A java implementation of Tic Tac Toe for the class T-303-HUGB.",
   "body": "# TicTacToe [![Build Status](https://travis-ci.org/VerzloBoyz/TicTacToe.svg?branch=master)](https://travis-ci.org/VerzloBoyz/TicTacToe)\r\n\r\n> A java implementation of Tic Tac Toe\r\n\r\n## Description\r\nThis repository contains a solution to the late-term assignment in the course `T-303-HUGB` at Reyjavík University. \r\n\r\n## Running the application\r\nIf you are using OSX you can simply run the script macRun.sh `./macRun.sh` (assuming you have gradle and heroku installed)\r\n\r\n## Members\r\n- Arnór Rafn Gíslason\r\n- Ármann Ari Árnason\r\n- Gunnar Bjarki Björnsson\r\n- Hjalti Steinar Sigurbjörnsson\r\n- Sverrir Þór Sigurðarson\r\n\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
