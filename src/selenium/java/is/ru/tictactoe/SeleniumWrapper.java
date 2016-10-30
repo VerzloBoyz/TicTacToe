@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,10 +17,10 @@ public class SeleniumWrapper {
 
     @BeforeClass
     public static void before() {
-        System.setProperty("webdriver.chrome.driver", "/Users/chromedriver");
-        driver = new ChromeDriver();
-        //baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
-        baseUrl = "http://localhost:5000/";
+        System.setProperty("webdriver.gecko.driver", "/home/ubuntu/Downloads/geckodriver");
+        driver = new FirefoxDriver();
+        baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
+        //baseUrl = "http://localhost:5000/";
         driver.get(baseUrl);
 
     }
