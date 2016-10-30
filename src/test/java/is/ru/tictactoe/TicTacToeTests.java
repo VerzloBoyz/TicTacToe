@@ -141,6 +141,7 @@ public class TicTacToeTests {
       testClass.insertAt(6); // X
 
       assertEquals('X', testClass.checkWinner());
+      testClass = null;
 
       TicTacToe testClass = new TicTacToe();
 
@@ -151,6 +152,19 @@ public class TicTacToeTests {
       testClass.insertAt(7); // X
 
       assertEquals('X', testClass.checkWinner());
+      testClass = null;
+
+      TicTacToe testClass = new TicTacToe();
+
+      testClass.insertAt(2); // X
+      testClass.insertAt(0); // O
+      testClass.insertAt(5); // X
+      testClass.insertAt(3); // O
+      testClass.insertAt(8); // X
+
+      assertEquals('X', testClass.checkWinner());
+      testClass = null;
+
 
     }
 
