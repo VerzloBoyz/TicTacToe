@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-10-29T19:39:00" hostname="clients-pool-1.nat.ru.is" time="0.004">
+<testsuite name="is.ru.tictactoe.TicTacToeTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-10-30T16:10:48" hostname="Gunnars-MacBook-Pro.local" time="0.004">
   <properties/>
   <testcase name="testVerticalWinner" classname="is.ru.tictactoe.TicTacToeTests" time="0.001"/>
   <testcase name="testGridIsEmpty" classname="is.ru.tictactoe.TicTacToeTests" time="0.0"/>

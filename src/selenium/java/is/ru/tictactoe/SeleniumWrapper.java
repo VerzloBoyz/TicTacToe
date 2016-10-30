@@ -17,9 +17,12 @@ public class SeleniumWrapper {
 
     @BeforeClass
     public static void before() {
+        System.setProperty("webdriver.chrome.driver", "/Users/chromedriver");
         driver = new ChromeDriver();
-        baseUrl = "http://localhost:5000";
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        //baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
+        baseUrl = "http://localhost:5000/";
+        driver.get(baseUrl);
+
     }
 
     @AfterClass
