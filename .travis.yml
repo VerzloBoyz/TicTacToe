@@ -48,3 +48,6 @@ after_success:
 
 after_failure:
     - "cat /home/travis/build/VerzloBoyz/TicTacToe/build/reports/tests/seleniumXvfb/index.html"
+    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html"
+    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html#classMethod"
+    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/packages/is.ru.tictactoe.html"
