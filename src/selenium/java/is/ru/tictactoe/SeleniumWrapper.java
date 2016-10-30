@@ -23,6 +23,7 @@ public class SeleniumWrapper {
         //baseUrl = "http://localhost:5000/";
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
+        driver.get(baseUrl);
     }
 
     @AfterClass
