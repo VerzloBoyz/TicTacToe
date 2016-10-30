@@ -15,7 +15,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
     public void testTitle() throws InterruptedException {
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
-
+/*
     @Test
     public void testFirstPlayer() {
 
@@ -140,5 +140,5 @@ public class WebInterfaceTests extends SeleniumWrapper {
       Thread.sleep(1000);
     }
 
-
+*/
 }
