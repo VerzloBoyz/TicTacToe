@@ -12,6 +12,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'jacoco' // for code coverage 
 
 mainClassName = "is.ru.tictactoe.WebInterface"
 
@@ -43,4 +44,10 @@ run {
 
 task stage {
     dependsOn installDist
+}
+// enable code coverage XML reports
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
