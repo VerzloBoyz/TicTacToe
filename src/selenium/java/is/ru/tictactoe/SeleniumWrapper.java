@@ -19,8 +19,8 @@ public class SeleniumWrapper {
     public static void before() {
         //System.setProperty("webdriver.gecko.driver", "/home/ubuntu/Downloads/geckodriver");
         driver = new FirefoxDriver();
-        baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
-        //baseUrl = "http://localhost:5000/";
+        //baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
+        baseUrl = "http://localhost:5000/";
         driver.get(baseUrl);
 
     }
