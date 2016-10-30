@@ -34,21 +34,21 @@ public class WebInterfaceTests extends SeleniumWrapper {
       WebElement newGame = driver.findElement(By.className("new"));
       newGame.click();
 
-      WebElement one = driver.findElement(By.id("0"));
-      one.click();
+      WebElement choice = driver.findElement(By.id("0"));
+      choice.click();
 
-      WebElement two = driver.findElement(By.id("1"));
-      two.click();
+      choice = driver.findElement(By.id("1"));
+      choice.click();
 
-      WebElement three = driver.findElement(By.id("3"));
-      three.click();
+      choice = driver.findElement(By.id("3"));
+      choice.click();
 
 
-      WebElement four = driver.findElement(By.id("5"));
-      four.click();
+      choice = driver.findElement(By.id("5"));
+      choice.click();
 
-      WebElement five = driver.findElement(By.id("6"));
-      five.click();
+      choice = driver.findElement(By.id("6"));
+      choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
 
@@ -76,23 +76,23 @@ public class WebInterfaceTests extends SeleniumWrapper {
       WebElement newGame = driver.findElement(By.className("new"));
       newGame.click();
 
-      WebElement one = driver.findElement(By.id("0"));
-      one.click();
+      WebElement choice = driver.findElement(By.id("0"));
+      choice.click();
 
-      WebElement two = driver.findElement(By.id("1"));
-      two.click();
+      choice = driver.findElement(By.id("1"));
+      choice.click();
 
-      WebElement three = driver.findElement(By.id("5"));
-      three.click();
+      choice = driver.findElement(By.id("5"));
+      choice.click();
 
-      WebElement four = driver.findElement(By.id("4"));
-      four.click();
+      choice = driver.findElement(By.id("4"));
+      choice.click();
 
-      WebElement five = driver.findElement(By.id("8"));
-      five.click();
+      choice = driver.findElement(By.id("8"));
+      choice.click();
 
-      WebElement six = driver.findElement(By.id("7"));
-      six.click();
+      choice = driver.findElement(By.id("7"));
+      choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
 
@@ -109,32 +109,32 @@ public class WebInterfaceTests extends SeleniumWrapper {
       WebElement newGame = driver.findElement(By.className("new"));
       newGame.click();
 
-      WebElement one = driver.findElement(By.id("0"));
-      one.click();
+      WebElement choice = driver.findElement(By.id("0"));
+      choice.click();
 
-      WebElement two = driver.findElement(By.id("1"));
-      two.click();
+      choice = driver.findElement(By.id("1"));
+      choice.click();
 
-      WebElement three = driver.findElement(By.id("2"));
-      three.click();
+      choice = driver.findElement(By.id("2"));
+      choice.click();
 
-      WebElement four = driver.findElement(By.id("3"));
-      four.click();
+      choice = driver.findElement(By.id("3"));
+      choice.click();
 
-      WebElement five = driver.findElement(By.id("4"));
-      five.click();
+      choice = driver.findElement(By.id("4"));
+      choice.click();
 
-      WebElement six = driver.findElement(By.id("6"));
-      six.click();
+      choice = driver.findElement(By.id("6"));
+      choice.click();
 
-      WebElement seven = driver.findElement(By.id("5"));
-      seven.click();
+      choice = driver.findElement(By.id("5"));
+      choice.click();
 
-      WebElement eight = driver.findElement(By.id("8"));
-      eight.click();
+      choice = driver.findElement(By.id("8"));
+      choice.click();
 
-      WebElement nine = driver.findElement(By.id("7"));
-      nine.click();
+      choice = driver.findElement(By.id("7"));
+      choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
 
