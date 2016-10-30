@@ -8,14 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class SeleniumWrapper {
     static WebDriver driver;
     static String baseUrl;
     static String port;
 
-    /**
-    * This method sets up firefox driver before testing.
-    */
     @BeforeClass
     public static void before() {
         driver = new ChromeDriver();
