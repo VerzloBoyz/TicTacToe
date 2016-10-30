@@ -16,7 +16,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         driver.get(baseUrl);
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
-/*
+
     @Test
     public void testFirstPlayer() {
 
@@ -140,6 +140,4 @@ public class WebInterfaceTests extends SeleniumWrapper {
       assertEquals("Draw!", x);
       Thread.sleep(1000);
     }
-
-*/
 }
