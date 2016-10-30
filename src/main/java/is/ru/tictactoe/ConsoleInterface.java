@@ -2,6 +2,11 @@ package is.ru.tictactoe;
 
 import java.util.Scanner;
 
+/*
+* The ConsoleInterface class is used when the player decides to play the game on the terminal.
+* It creates an instance of our TicTacToe game and takes care of the console UI.
+**/
+
 public class ConsoleInterface {
 
     private TicTacToe game;
@@ -15,6 +20,9 @@ public class ConsoleInterface {
         scanner.close();
     }
 
+    /*
+    * This function greets our players.
+    */
     private void greeting() {
         printHeader();
         System.out.println();
@@ -34,6 +42,9 @@ public class ConsoleInterface {
         System.out.println("");
     }
 
+    /*
+    * This function prints the gameboard.
+    */
     private void printGrid() {
         System.out.println();
         System.out.println("       |       |");
@@ -50,6 +61,10 @@ public class ConsoleInterface {
         System.out.println();
     }
 
+    /*
+    * This function gets an user input and puts it in the game grid. It then checks if the game has ended.
+    * If the game hasn't ended it switches the turn to the next player and repeats until the game is finished.
+    */
     private void getInput() {
         System.out.print(game.getPlayer() + ": ");
         int choice = scanner.nextInt() - 1;
@@ -63,6 +78,9 @@ public class ConsoleInterface {
         getInput();
     }
 
+    /*
+    * Checks if the game has ended and whether there was a winner or the result was a draw.
+    */
     private Boolean gameEnd() {
         if (game.checkWinner() == 'X' || game.checkWinner() == 'O') {
             printGrid();
