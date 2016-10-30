@@ -11,12 +11,16 @@
 
 ## Contents 
 
-- [Setup](docs/Administration_Manual.md)
+- [Administration Manual](docs/Administration_Manual.md)
 - [Development Manual](docs/Development_Manual.md)
 - [Design Report](docs/Design_Report.md)
 
 ## Description
 This repository contains a solution to the late-term assignment in the course `T-303-HUGB` at Reyjavík University. 
+
+## Quick start
+
+
 
 ## Members
 - Arnór Rafn Gíslason
