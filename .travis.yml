@@ -29,7 +29,6 @@ script:
     - ./gradlew jacocTestReport
     - ./gradlew build
     - ./gradlew seleniumXvfb
-    - ./bin/move
 
 branches:
   only:
