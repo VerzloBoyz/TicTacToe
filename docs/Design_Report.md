@@ -10,7 +10,7 @@
 |           3 | Check three boxes in a horizontal, vertical or diagonal row | As soon as a user gets three boxes in a row the application notifies the player that he has won. | |
 |           4 | Produce a draw on the board | The application notifies the users that the result is a draw. | |
 |           5 | Finish a game of Tic Tac Toe and reset the table. | The grid will be cleared and reset and players can play again. ||
-|           6 | Start a new game of Tic Tac Toe and make sure it'ss Player X's turn.| A new game will be started and it's now Player X's turn.| ||
+|           6 | Start a new game of Tic Tac Toe and make sure it's Player X's turn.| A new game will be started and it's now Player X's turn.| ||
 ### System Testing Results
 No errors came up during the test. We feel no need to redo the test in any way at this point. 
 
