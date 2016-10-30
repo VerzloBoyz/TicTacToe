@@ -36,6 +36,7 @@ script:
 branches:
   only:
     - master
+    - dev
 
 before_install:
     - pip install --user codecov
