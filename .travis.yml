@@ -7,6 +7,7 @@ notifications:
     recipients: 
       - hjalti15@ru.is
       - gunnarbb15@ru.is
+      - armann15@ru.is
                            
-    on_success: always
+    on_success: never
     on_failure: always
