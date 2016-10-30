@@ -9,8 +9,10 @@
 |           2 | Check a box as player 1 and make sure the turn switches to player 2 | A box should be checked and the turn switches to player 2 | |
 |           3 | Check three boxes in a horizontal, vertical or diagonal row | As soon as a user gets three boxes in a row the application notifies the player that he has won. | |
 |           4 | Produce a draw on the board | The application notifies the users that the result is a draw. | |
-|           5 | Finish a game of Tic Tac Toe and reset the table. | The grid will be cleared and reset and players can play again. |
+|           5 | Finish a game of Tic Tac Toe and reset the table. | The grid will be cleared and reset and players can play again. ||
+|           6 | Start a new game of Tic Tac Toe and make sure its Player X's turn.||
 ### System Testing Results
+No errors came up during the test. We feel no need to redo the test in any way at this point. 
 
 ### Requirements list
 
@@ -19,6 +21,7 @@
 3. When a user has successfully checked 3 boxes in a row he should be notified that he is the victor.
 4. Users should be notified if there is a draw.
 5. Users should be able to reset the Tic tac toe grid as often as they want if they are playing via web.
+6. Player X should always make the first move in a new game.
 
 ## Class Diagram
 ![Class Diagram](resources/class_diagram.png)
