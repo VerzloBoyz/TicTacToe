@@ -21,3 +21,12 @@ deploy:
 branches:
   only:
     - master
+
+before_install:
+    - pip install --user codecov
+script:
+    - "./gradlew clean"
+    - "./gradlew check"
+    - "./gradlew jacocTestReport"
+after_success:
+    - codecov
