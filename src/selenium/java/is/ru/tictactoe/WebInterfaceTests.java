@@ -1,12 +1,13 @@
 package is.ru.tictactoe;
 
-import static org.junit.Assert.assertEqual;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
     public void testTitle() {
         driver.get(baseUrl);
-        assertEqual("Tic Tac Toe", driver.getTitle());
+        assertEquals("Tic Tac Toe", driver.getTitle());
     }
 }
