@@ -21,6 +21,8 @@ deploy:
 branches:
   only:
     - master
+    -dev
+    - tests
 
 before_install:
     - pip install --user codecov
