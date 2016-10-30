@@ -1,4 +1,5 @@
-# TicTacToe [![Build Status](https://travis-ci.org/VerzloBoyz/TicTacToe.svg?branch=master)](https://travis-ci.org/VerzloBoyz/TicTacToe)
+# TicTacToe [![Build Status](https://travis-ci.org/VerzloBoyz/TicTacToe.svg?branch=master)](https://travis-ci.org/VerzloBoyz/TicTacToe) [![codecov](https://codecov.io/gh/VerzloBoyz/TicTacToe/branch/master/graph/badge.svg)](https://codecov.io/gh/VerzloBoyz/TicTacToe)
+
 ```
 ████████╗██╗ ██████╗    ████████╗ █████╗  ██████╗    ████████╗ ██████╗ ███████╗
 ╚══██╔══╝██║██╔════╝    ╚══██╔══╝██╔══██╗██╔════╝    ╚══██╔══╝██╔═══██╗██╔════╝
