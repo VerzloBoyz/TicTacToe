@@ -65,7 +65,7 @@ task seleniumXvfb(type: Test, dependsOn: installDist) {
 
     doFirst {
     //    'bin/xvfb start'.execute()
-        'build/install/TicTacToe/bin/TicTacToe &'.execute()
+    //    'build/install/TicTacToe/bin/TicTacToe &'.execute()
     }
 
     doLast {
