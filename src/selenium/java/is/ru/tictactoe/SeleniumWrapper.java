@@ -19,8 +19,8 @@ public class SeleniumWrapper {
     public static void before() {
         System.setProperty("webdriver.gecko.driver", "/home/travis/build/VerzloBoyz/TicTacToe/geckodriver");
         driver = new FirefoxDriver();
-        baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
-        //baseUrl = "http://localhost:5000/";
+        //baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
+        baseUrl = "http://localhost:5000/";
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
     }
