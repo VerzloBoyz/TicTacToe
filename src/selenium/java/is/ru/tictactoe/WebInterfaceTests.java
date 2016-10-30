@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class WebInterfaceTests extends SeleniumWrapper {
@@ -14,6 +15,9 @@ public class WebInterfaceTests extends SeleniumWrapper {
     @Test
     public void testTitle() throws InterruptedException {
         driver.navigate().refresh();
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 
@@ -23,6 +27,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, 3);
 
         String turn = driver.findElement(By.className("turn")).getText();
         assertEquals("Player 1 make your move.", turn);
@@ -52,6 +58,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
         choice = driver.findElement(By.id("6"));
         choice.click();
 
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("X just won the game.", x);
         Thread.sleep(1000);
@@ -64,6 +72,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
@@ -95,6 +105,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         choice = driver.findElement(By.id("7"));
         choice.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("O just won the game.", x);
@@ -136,6 +148,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         choice = driver.findElement(By.id("7"));
         choice.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, 5);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("Draw!", x);
