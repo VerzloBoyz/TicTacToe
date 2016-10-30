@@ -43,3 +43,6 @@ before_install:
 
 after_success:
     - codecov
+
+after_failure:
+    "cat /home/travis/build/VerzloBoyz/TicTacToe/build/reports/tests/seleniumXvfb/index.html"
