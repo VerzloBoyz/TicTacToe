@@ -51,10 +51,10 @@ public class WebInterfaceTests extends SeleniumWrapper {
       choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
-
-      Thread.sleep(1000);
       assertEquals("X just won the game.", x);
+      Thread.sleep(1000);
     }
+
 
     @Test
     public void testNewGame() throws InterruptedException{
@@ -64,8 +64,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
       newGame.click();
 
       String x = driver.findElement(By.className("info")).getText();
-      Thread.sleep(1000);
       assertEquals("", x);
+      Thread.sleep(1000);
     }
 
     @Test
@@ -95,9 +95,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
       choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
-
-      Thread.sleep(1000);
       assertEquals("O just won the game.", x);
+      Thread.sleep(1000);
     }
 
 
@@ -137,9 +136,8 @@ public class WebInterfaceTests extends SeleniumWrapper {
       choice.click();
 
       String x = driver.findElement(By.className("info")).getText();
-
-      Thread.sleep(1000);
       assertEquals("Draw!", x);
+      Thread.sleep(1000);
     }
 
 
