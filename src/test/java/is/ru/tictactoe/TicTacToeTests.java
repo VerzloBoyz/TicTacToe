@@ -90,5 +90,17 @@ public class TicTacToeTests {
         assertEquals('X', testClass.checkWinner());
     }
 
+    @Test
+    public void testGetPlayer() {
+        TicTacToe testClass = new TicTacToe();
+        assertEquals("Player 1", testClass.getPlayer());
+    }
+
+    @Test
+    public void testReset() {
+        TicTacToe testClass = new TicTacToe();
+        assertEquals(true, testClass.reset());
+    }
+
 
 }
