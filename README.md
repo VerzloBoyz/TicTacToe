@@ -20,7 +20,8 @@
 This repository contains a solution to the late-term assignment in the course `T-303-HUGB` at Reyjavík University. 
 
 ## Quick start
-Requires `Git`, `JDK 7` or newer, `Gradle` and `Heroku`. 
+Requires `Git`, `JDK 7` or newer, `Gradle` and `Heroku`. Check the [Administration Manual](docs/Administration_Manual.md) for more info.
+
 ```
 git clone https://github.com/VerzloBoyz/TicTacToe.git && cd TicTacToe
 ```
