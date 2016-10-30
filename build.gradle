@@ -27,13 +27,13 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     compile 'com.sparkjava:spark-core:2.5'
 
-    testCompile 'junit:junit:4.11'
+    testCompile 'junit:junit:4.+'
 
-    seleniumCompile 'junit:junit:4.11'
+    seleniumCompile 'junit:junit:4.+'
     seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
     seleniumCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.0.1'
 
-    seleniumCompileXvfb 'junit:junit:4.11'
+    // seleniumCompileXvfb 'junit:junit:4.11'
     seleniumCompileXvfb 'org.seleniumhq.selenium:selenium-java:2.48.2'
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
