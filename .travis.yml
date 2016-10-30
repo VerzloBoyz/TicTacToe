@@ -21,7 +21,7 @@ deploy:
 branches:
   only:
     - master
-    -dev
+    - dev
     - tests
 
 before_install:
