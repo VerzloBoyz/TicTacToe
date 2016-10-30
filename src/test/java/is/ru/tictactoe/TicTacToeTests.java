@@ -115,19 +115,42 @@ public class TicTacToeTests {
     public void testNobodyWins() {
       TicTacToe testClass = new TicTacToe();
       char NOBODY_HAS_WON = '-';
-      testClass.insertAt(1); // X
-      testClass.insertAt(4); // O
-      testClass.insertAt(7); // X
-      testClass.insertAt(2); // O
-      testClass.insertAt(8); // X
+      char DRAW = '+';
+      testClass.insertAt(0); // X
+      testClass.insertAt(3); // O
+      testClass.insertAt(6); // X
+      testClass.insertAt(1); // O
       assertEquals(NOBODY_HAS_WON, testClass.checkWinner());
-      // testClass.insertAt(5); // O
-      // testClass.insertAt(3); // X
-      // testClass.insertAt(9); // O
-      // testClass.insertAt(6); // X
-      // assertEquals('-', testClass.checkWinner());
+      testClass.insertAt(7); // X
+      assertEquals(NOBODY_HAS_WON, testClass.checkWinner());
+      testClass.insertAt(4); // O
+      testClass.insertAt(2); // X
+      testClass.insertAt(8); // O
+      testClass.insertAt(5); // X
+      assertEquals('+', testClass.checkWinner());
+    }
 
+    @Test
+    public void testWinnerX() {
+      TicTacToe testClass = new TicTacToe();
 
+      testClass.insertAt(0); // X
+      testClass.insertAt(4); // O
+      testClass.insertAt(3); // X
+      testClass.insertAt(1); // O
+      testClass.insertAt(6); // X
+
+      assertEquals('X', testClass.checkWinner());
+
+      TicTacToe testClass = new TicTacToe();
+
+      testClass.insertAt(1); // X
+      testClass.insertAt(0); // O
+      testClass.insertAt(4); // X
+      testClass.insertAt(3); // O
+      testClass.insertAt(7); // X
+
+      assertEquals('X', testClass.checkWinner());
 
     }
 
