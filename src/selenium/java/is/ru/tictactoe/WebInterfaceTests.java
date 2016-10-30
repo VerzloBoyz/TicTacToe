@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
@@ -17,7 +16,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         driver.navigate().refresh();
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        
+
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 
