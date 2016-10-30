@@ -1,6 +1,8 @@
 # Development Manual
 > This manual describes the steps necessary to start working on the Tic Tac Toe game and contains some info on best practices.
+
 ## Prerequisites
+
 - **Java Development Kit** (JDK) 7 or higher
     - Any of the following will work
     -   OpenJDK 7 / OpenJDK 8 - [Download](http://openjdk.java.net/install/)
