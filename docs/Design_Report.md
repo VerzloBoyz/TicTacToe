@@ -16,7 +16,7 @@ No errors came up during the test. We feel no need to redo the test in any way a
 
 ### Requirements list
 
-1. Users should be able to choose whether he wants to play the game via console or via web.
+1. Users should be able to choose whether they want to play the game via console or via web.
 2. Users should not be able to check more than one box each turn.
 3. When a user has successfully checked 3 boxes in a row he should be notified that he is the victor.
 4. Users should be notified if there is a draw.
