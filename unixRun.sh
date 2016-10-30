@@ -8,7 +8,6 @@ if [ "$input" != "1" ] && [ "$input" != "2" ]; then
 elif [ "$input" = "1" ]; then
     perl -i -pe 's/.*/mainClassName = "is.ru.tictactoe.WebInterface"/ if $.==16' build.gradle
     ./gradlew installDist > /dev/null
-    heroku local web
     gradle build > /dev/null
     heroku local web
 elif [ "$input" = "2" ]; then
