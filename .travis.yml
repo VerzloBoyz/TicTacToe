@@ -10,13 +10,24 @@ notifications:
       - armann15@ru.is
 
     on_success: never
-    on_failure: alway
+    on_failure: always
 
 deploy:
   provider: heroku
   api_key:
     secure: DBHOv/vSPUTIKCAswR3BX7gGancxkbDPM4ZyrfmademQAbY/dT+fhuePNcnZliO6KkzYVYyTUz9P91x5FzDD2Z7BgyGU51w:L3IdyRdZFYBZvUn1+7/KQEEgegjAIkgyhLPNN6+BObNiZqedGICjLMQwLCO2xQKesNZ+hkakf/vSnxOlSW4RE0V9IkgHq4yBI5Fm6bP5oId6q4smToHRi8cPoLoUqC2ASSfc/lDcZ8PYNGUudf4ythwWHDFM7fK2h9McFwpSDr4AdKSTNeiPMeI01AYVSuELBsDXFnWl3E8Wh/hi31pV5b43c5+i8ROgltY7cI4G9y8obupmEGWZllHbRFEs4wX3+muaGZnHqUENhgytNZ+Hx1dwyUNz3aSU52+cF+Y+NgD54HimdKRjdUcXx1okGNX+CTeCxl73pV3ptvCUvENHvwimwIQGfvjGd/GLZlCzW2eDPe4WFFxO/6x+/9pJ8+0PX1PA9Tv4SOfaGum/xYfjKd5UroUifrEl8cCbHiukkw6qXZ8GzOuEwb7hRqalqf1IWxgkYVEGveAM08dlej4z2i0HiYkJ3UhDV+Z/6X8pTYc/WRv9NIKdPTPMKnSCzgoEikEX99D434jS77IgLfrOvUT/erSgBHrL8booJIsAkzvfFJZr2gzjOpb/JVEXtE1oX/pyzo/EZ72I=
   app: morning-anchorage-85972
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+
+  script:
+    - ./gradlew check
+    - ./gradlew build
+    - ./gradlew seleniumXvfb
+    - ./bin/move
 
 branches:
   only:
