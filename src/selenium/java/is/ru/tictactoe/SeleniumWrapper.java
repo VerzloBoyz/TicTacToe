@@ -21,7 +21,7 @@ public class SeleniumWrapper {
         driver = new FirefoxDriver();
         //baseUrl = "https://morning-anchorage-85972.herokuapp.com/";
         baseUrl = "http://localhost:5000/";
-        driver.get(baseUrl);
+        driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
     }
 

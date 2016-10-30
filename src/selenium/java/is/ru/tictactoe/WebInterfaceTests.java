@@ -13,6 +13,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
     public void testTitle() throws InterruptedException {
+        driver.get(baseUrl);
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 /*
