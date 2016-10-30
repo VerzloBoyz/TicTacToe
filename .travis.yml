@@ -24,7 +24,9 @@ before_script:
     - sleep 3
 
 script:
+    - ./gradlew clean
     - ./gradlew check
+    - ./gradlew jacocTestReport
     - ./gradlew build
     - ./gradlew seleniumXvfb
     - ./bin/move
@@ -35,9 +37,6 @@ branches:
 
 before_install:
     - pip install --user codecov
-script:
-    - "./gradlew clean"
-    - "./gradlew check"
-    - "./gradlew jacocTestReport"
+
 after_success:
     - codecov
