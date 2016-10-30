@@ -106,7 +106,7 @@ public class TicTacToe {
     }
 
     private Boolean checkLegalInsert(int i) {
-        if (i < 0 || i > SIZE)
+        if (i < 0 || i > SIZE - 1)
             return false;
 
         if (theGrid[i] == X_Player || theGrid[i] == O_Player)
