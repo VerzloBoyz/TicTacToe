@@ -34,7 +34,7 @@ script:
     - ./gradlew check
     - ./gradlew jacocTestReport
     - ./gradlew build
-    - ./gradlew seleniumXvfb --info
+  # - ./gradlew seleniumXvfb --info
 
 branches:
   only:
