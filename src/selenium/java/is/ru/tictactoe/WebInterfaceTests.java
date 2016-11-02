@@ -13,6 +13,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
     public void testTitle() throws InterruptedException {
+
         driver.navigate().refresh();
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -22,6 +23,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
     public void testFirstPlayer() {
+
         driver.navigate().refresh();
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
@@ -29,9 +31,12 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 3);
+        wait = new WebDriverWait(driver, 5);
 
         String turn = driver.findElement(By.className("turn")).getText();
+
+        wait = new WebDriverWait(driver, 5);
+
         assertEquals("Player 1 make your move.", turn);
     }
 
@@ -74,7 +79,6 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("X just won the game.", x);
-        Thread.sleep(1000);
     }
 
 
@@ -91,7 +95,6 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
-        Thread.sleep(1000);
     }
 
     @Test
@@ -138,7 +141,6 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("O just won the game.", x);
-        Thread.sleep(1000);
     }
 
 
@@ -201,6 +203,5 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("Draw!", x);
-        Thread.sleep(1000);
     }
 }

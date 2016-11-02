@@ -6,6 +6,7 @@ $(function() {
   var info = $('.info');
   var turn = $('.turn');
   displayNextPlayer();
+  reset(table);
 
   //new game
   $('.new').click(function() {

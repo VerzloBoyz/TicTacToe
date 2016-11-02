@@ -34,7 +34,7 @@ body table td.X:before {
 }
 body table td.O:before {
   content: "O";
-  color: green;
+  color: blue;
 }
 body table td:hover{
   opacity: 0.6;
