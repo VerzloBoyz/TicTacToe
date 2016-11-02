@@ -66,7 +66,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         choice = driver.findElement(By.id("6"));
         choice.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(8000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("X just won the game.", x);
@@ -83,7 +83,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(8000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
@@ -129,7 +129,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(8000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("O just won the game.", x);
@@ -191,7 +191,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(8000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("Draw!", x);
