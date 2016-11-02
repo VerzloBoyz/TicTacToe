@@ -36,39 +36,37 @@ public class WebInterfaceTests extends SeleniumWrapper {
     @Test
     public void testXWinner() throws InterruptedException{
 
-        driver.navigate().refresh();
-
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        driver.get(baseUrl);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("3"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("6"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("X just won the game.", x);
