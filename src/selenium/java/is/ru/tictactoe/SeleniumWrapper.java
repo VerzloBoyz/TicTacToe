@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumWrapper {
     static WebDriver driver;
@@ -31,9 +32,7 @@ public class SeleniumWrapper {
         driver.close();
     }
 
-    void waitForLoad(WebDriver driver) {
-
-      new WebDriverWait(driver, 20).until((ExpectedCondition<Boolean>) wd ->
-            ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+    void waitForLoad() {
+      driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 }
