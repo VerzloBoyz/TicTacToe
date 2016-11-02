@@ -30,11 +30,11 @@ body table td:before {
 }
 body table td.X:before {
   content: "X";
-  color: orange;
+  color: yellow;
 }
 body table td.O:before {
   content: "O";
-  color: blue;
+  color: purple;
 }
 body table td:hover{
   opacity: 0.6;
@@ -44,7 +44,7 @@ body .new {
   padding: 5px 10px;
   color: white;
   cursor: pointer;
-  background-color: green;
+  background-color: cornflowerblue;
   text-align: center;
   text-decoration: none;
   display: inline-block;
