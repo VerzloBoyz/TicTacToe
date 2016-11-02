@@ -14,29 +14,22 @@ public class WebInterfaceTests extends SeleniumWrapper {
     @Test
     public void testTitle() throws InterruptedException {
 
-        driver.navigate().refresh();
-
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-
+        driver.get(baseUrl);
+        Thread.sleep(2000);
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 
     @Test
     public void testFirstPlayer() {
 
-        driver.navigate().refresh();
-
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        driver.get(baseUrl);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         String turn = driver.findElement(By.className("turn")).getText();
-
-        wait = new WebDriverWait(driver, 5);
-
         assertEquals("Player 1 make your move.", turn);
     }
 
