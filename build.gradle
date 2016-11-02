@@ -13,7 +13,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco' // for code coverage
 
-mainClassName = "is.ru.tictactoe.WebInterface"
+mainClassName = "is.ru.tictactoe.ConsoleInterface"
 repositories {
     jcenter()
 }
