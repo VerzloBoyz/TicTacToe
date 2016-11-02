@@ -20,7 +20,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
     }
 
     @Test
-    public void testFirstPlayer() {
+    public void testFirstPlayer() throws InterruptedException {
 
         driver.get(baseUrl);
 
