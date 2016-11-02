@@ -30,4 +30,10 @@ public class SeleniumWrapper {
     public static void after() {
         driver.close();
     }
+
+    void waitForLoad(WebDriver driver) {
+
+      new WebDriverWait(driver, 20).until((ExpectedCondition<Boolean>) wd ->
+            ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+    }
 }

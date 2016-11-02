@@ -15,7 +15,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
     public void testTitle() throws InterruptedException {
 
         driver.get(baseUrl);
-        Thread.sleep(1000);
+        waitForLoad(driver);
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 
@@ -27,7 +27,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         String turn = driver.findElement(By.className("turn")).getText();
         assertEquals("Player 1 make your move.", turn);
@@ -41,32 +41,32 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("3"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("6"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("X just won the game.", x);
@@ -78,12 +78,12 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         driver.get(baseUrl);
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
@@ -94,42 +94,42 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         driver.get(baseUrl);
 
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        waitForLoad(driver);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("4"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("8"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("O just won the game.", x);
@@ -141,59 +141,61 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         driver.get(baseUrl);
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("2"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("3"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("4"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("6"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("8"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        Thread.sleep(2000);
+        waitForLoad(driver);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("Draw!", x);
     }
+
+
 }
