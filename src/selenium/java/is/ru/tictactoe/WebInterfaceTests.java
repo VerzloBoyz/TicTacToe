@@ -75,14 +75,15 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
     @Test
     public void testNewGame() throws InterruptedException{
-        driver.navigate().refresh();
 
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        driver.get(baseUrl);
+
+        Thread.sleep(3000);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
@@ -91,44 +92,44 @@ public class WebInterfaceTests extends SeleniumWrapper {
     @Test
     public void testOWinner() throws InterruptedException{
 
-        driver.navigate().refresh();
+        driver.get(baseUrl);
 
         WebDriverWait wait = new WebDriverWait(driver, 5);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("4"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("8"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("O just won the game.", x);
@@ -138,59 +139,59 @@ public class WebInterfaceTests extends SeleniumWrapper {
     @Test
     public void testDraw() throws InterruptedException{
 
-        driver.navigate().refresh();
+        driver.get(baseUrl);
 
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("1"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("2"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("3"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("4"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("6"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("5"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("8"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         choice = driver.findElement(By.id("7"));
         choice.click();
 
-        wait = new WebDriverWait(driver, 5);
+        Thread.sleep(3000);
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("Draw!", x);
