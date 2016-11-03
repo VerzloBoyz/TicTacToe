@@ -15,7 +15,9 @@ public class WebInterfaceTests extends SeleniumWrapper {
     public void testTitle() throws InterruptedException {
 
         driver.get(baseUrl);
-        Thread.sleep(2000);
+
+        waitForLoad();
+
         assertEquals("Tic Tac Toe", driver.getTitle());
     }
 
@@ -27,7 +29,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement newGame = driver.findElement(By.className("new"));
         newGame.click();
 
-        Thread.sleep(2000);
+        waitForLoad();
 
         String turn = driver.findElement(By.className("turn")).getText();
         assertEquals("Player 1 make your move.", turn);
@@ -105,7 +107,9 @@ public class WebInterfaceTests extends SeleniumWrapper {
         WebElement choice = driver.findElement(By.id("0"));
         choice.click();
 
-        String x = driver.findElement(By.id("0")).getText();
+        waitForLoad();
+
+        String x = driver.findElement(By.id("0")).getAttribute("class");
         assertEquals("X", x);
     }
 
@@ -131,7 +135,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         waitForLoad();
 
-        String o = driver.findElement(By.id("1")).getText();
+        String o = driver.findElement(By.id("1")).getAttribute("class");
         assertEquals("O", o);
     }
 
