@@ -14,6 +14,12 @@ public class TicTacToeTests {
     //  6 | 7 | 8     7 | 8 | 9
 
     @Test
+    public void testMain() {
+      TicTacToe testClass = new TicTacToe();
+      testClass.main(new String[] {"arg1", "arg2", "arg3"});
+    }
+
+    @Test
     public void testGridSize() {
         TicTacToe testClass = new TicTacToe();
         assertEquals(9, testClass.getSize());
@@ -65,6 +71,8 @@ public class TicTacToeTests {
        TicTacToe testClass = new TicTacToe();
        testClass.insertAt(5); // X
        assertEquals(false, testClass.insertAt(5)); // O
+       assertEquals(true, testClass.insertAt(0));
+       assertEquals(false, testClass.insertAt(11));
     }
 
     @Test
