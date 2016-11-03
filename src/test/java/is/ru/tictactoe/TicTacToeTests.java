@@ -22,7 +22,9 @@ public class TicTacToeTests {
     @Test
     public void testGridIsEmpty() {
         TicTacToe testClass = new TicTacToe();
+        testClass.insertAt(5);
         assertEquals(true, testClass.isEmpty());
+        assertEquals(false, testClass.isEmpty());
     }
 
     @Test
@@ -58,12 +60,12 @@ public class TicTacToeTests {
         assertEquals(true, testClass.reset());
     }
 
-    // @Test
-    // public void testCheckLegalInsert() {
-    //   TicTacToe testClass = new TicTacToe();
-    //   testClass.insertAt(5);
-    //   assertEquals(false, testClass.checkLegalInsert(5));
-    // }
+    @Test
+    public void testCheckLegalInsert() {
+       TicTacToe testClass = new TicTacToe();
+       testClass.insertAt(5); // X
+       assertEquals(false, testClass.insertAt(5)); // O
+    }
 
     @Test
     public void testNobodyWins() {
