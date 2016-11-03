@@ -126,7 +126,7 @@ public char checkWinner() {
  * Checks if the input index is a legal insert into the gameboard
  */
 private Boolean checkLegalInsert(int i) {
-        if (i < 0 || i > SIZE)
+        if (i < 0 || i >= SIZE)
                 return false;
 
         if (theGrid[i] == X_Player || theGrid[i] == O_Player)
@@ -144,7 +144,7 @@ public char getAt(int i) {
 }
 
 private void checkOutOfBounds(int i){
-        if (i < 0 || i > SIZE - 1)
+        if (i < 0 || i > SIZE)
                 throw new IndexOutOfBoundsException();
 }
 
