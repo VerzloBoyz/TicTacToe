@@ -396,4 +396,11 @@ public void playerOWinsInMinorDiagonal() {
 
         assertEquals('O', testClass.checkWinner());
 }
+
+@Test
+public void insertOutOfBounds() {
+        TicTacToe testClass = new TicTacToe();
+
+        assertFalse(testClass.insertAt(10));
+}
 }
