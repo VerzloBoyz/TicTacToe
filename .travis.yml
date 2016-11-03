@@ -9,7 +9,7 @@ notifications:
       - gunnarbb15@ru.is
       - armann15@ru.is
 
-    on_success: never
+    on_success: always
     on_failure: always
 
 deploy:
@@ -42,7 +42,6 @@ script:
 branches:
   only:
     - master
-    - dev
 
 after_success:
     - codecov

@@ -49,11 +49,12 @@ body table td:hover {
 }
 
 body .new {
+
     border: none;
     padding: 5px 10px;
     color: white;
     cursor: pointer;
-    background-color: orange;
+    background-color: purple;
     text-align: center;
     text-decoration: none;
     display: inline-block;
