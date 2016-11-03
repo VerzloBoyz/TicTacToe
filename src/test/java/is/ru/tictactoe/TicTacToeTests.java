@@ -22,8 +22,8 @@ public class TicTacToeTests {
     @Test
     public void testGridIsEmpty() {
         TicTacToe testClass = new TicTacToe();
-        testClass.insertAt(5);
         assertTrue(testClass.isEmpty());
+        testClass.insertAt(5);
         assertFalse(testClass.isEmpty());
     }
 
