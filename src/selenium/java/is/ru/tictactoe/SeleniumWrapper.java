@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.ExpectedCondition;
+//import org.openqa.selenium.JavascriptExecutor;
 
 public class SeleniumWrapper {
     static WebDriver driver;
@@ -29,5 +32,9 @@ public class SeleniumWrapper {
     @AfterClass
     public static void after() {
         driver.close();
+    }
+
+    void waitForLoad() throws InterruptedException {
+      Thread.sleep(2000);
     }
 }
