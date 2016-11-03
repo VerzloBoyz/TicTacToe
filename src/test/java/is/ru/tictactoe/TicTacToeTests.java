@@ -42,6 +42,7 @@ public class TicTacToeTests {
     @Test(expected = IndexOutOfBoundsException.class)
     public void testCharAtIndexFails() {
         TicTacToe testClass = new TicTacToe();
+        testClass.insertAt(3); // X
         testClass.getAt(20);
     }
 
