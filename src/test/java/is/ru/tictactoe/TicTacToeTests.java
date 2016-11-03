@@ -284,7 +284,7 @@ public class TicTacToeTests {
       testClass.insertAt(0); // X
       testClass.insertAt(8); // O
       testClass.insertAt(1); // X
-      testClass.insertAt(2); // O
+      testClass.insertAt(5); // O
 
       assertEquals('O', testClass.checkWinner());
     }
@@ -321,7 +321,7 @@ public class TicTacToeTests {
         testClass.insertAt(3); // O
         testClass.insertAt(1); // X
         testClass.insertAt(4); // O
-        testClass.insertAt(5); // X
+        testClass.insertAt(6); // X
         testClass.insertAt(5); // O
 
 
@@ -352,17 +352,18 @@ public class TicTacToeTests {
         TicTacToe testClass = new TicTacToe();
 
         // char array     board
-        //  0 | 1 | 2     X |   |
-        //  3 | 4 | 5       | X | O
-        //  6 | 7 | 8       | O | X
+        //  0 | 1 | 2     O |   | X
+        //  3 | 4 | 5       | O | X
+        //  6 | 7 | 8       | X | O
 
-        testClass.insertAt(0); // X
-        testClass.insertAt(5); // O
-        testClass.insertAt(4); // X
-        testClass.insertAt(7); // O
-        testClass.insertAt(8); // X
+        testClass.insertAt(2); // X
+        testClass.insertAt(4); // O
+        testClass.insertAt(5); // X
+        testClass.insertAt(8); // O
+        testClass.insertAt(7); // X
+        testClass.insertAt(0); // O
 
-        assertEquals('X', testClass.checkWinner());
+        assertEquals('O', testClass.checkWinner());
     }
 
     @Test
@@ -370,16 +371,17 @@ public class TicTacToeTests {
         TicTacToe testClass = new TicTacToe();
 
         // char array     board
-        //  0 | 1 | 2       |   | X
-        //  3 | 4 | 5       | X | O
-        //  6 | 7 | 8     X | O |
+        //  0 | 1 | 2       |   | O
+        //  3 | 4 | 5       | O | X
+        //  6 | 7 | 8     O | X | X
 
-        testClass.insertAt(2); // X
-        testClass.insertAt(5); // O
-        testClass.insertAt(4); // X
-        testClass.insertAt(7); // O
-        testClass.insertAt(6); // X
+        testClass.insertAt(8); // X
+        testClass.insertAt(4); // O
+        testClass.insertAt(7); // X
+        testClass.insertAt(6); // O
+        testClass.insertAt(5); // X
+        testClass.insertAt(2); // O
 
-        assertEquals('X', testClass.checkWinner());
+        assertEquals('O', testClass.checkWinner());
     }
 }
