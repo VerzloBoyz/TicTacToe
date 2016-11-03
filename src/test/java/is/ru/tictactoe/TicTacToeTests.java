@@ -48,6 +48,7 @@ public class TicTacToeTests {
     @Test
     public void testInsertAt() {
         TicTacToe testClass = new TicTacToe();
+        testClass.insertAt(3); // X
         assertTrue(testClass.insertAt(4));
         assertFalse(testClass.insertAt(20));
     }
