@@ -1,56 +1,66 @@
 body {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 50px;
-  color: cornflowerblue;
-  background: white;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    color: cornflowerblue;
+    background: white;
 }
+
 body h1 {
-  font-weight: normal;
+    font-weight: normal;
 }
+
 body .turn {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 body table {
-  border-collapse: collapse;
-  width: 360px;
-  margin: 0 auto;
+    border-collapse: collapse;
+    width: 360px;
+    margin: 0 auto;
 }
+
 body table td {
-  width: 120px;
-  height: 120px;
-  border: 5px solid white;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: cornflowerblue;
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: cornflowerblue;
 }
+
 body table td:before {
-  font-size: 1.5em;
-  line-height: 1;
+    font-size: 1.5em;
+    line-height: 1;
 }
+
 body table td.X:before {
-  content: "X";
-  color: orange;
+    content: "X";
+    color: orange;
 }
+
 body table td.O:before {
-  content: "O";
-  color: purple;
+    content: "O";
+    color: purple;
 }
-body table td:hover{
-  opacity: 0.6;
+
+body table td:hover {
+    opacity: 0.6;
 }
+
 body .new {
-  border: none;
-  padding: 5px 10px;
-  color: white;
-  cursor: pointer;
-  background-color: orange;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 50px;
-  border-radius: 15px;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    background-color: orange;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-radius: 15px;
 }
+
 body .new:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }

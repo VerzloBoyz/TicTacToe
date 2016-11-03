@@ -11,18 +11,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebInterfaceTests extends SeleniumWrapper {
 
-    @Test
-    public void testTitle() throws InterruptedException {
+@Test
+public void testTitle() throws InterruptedException {
 
         driver.get(baseUrl);
 
         waitForLoad();
 
         assertEquals("Tic Tac Toe", driver.getTitle());
-    }
+}
 
-    @Test
-    public void testFirstPlayer() throws InterruptedException {
+@Test
+public void testFirstPlayer() throws InterruptedException {
 
         driver.get(baseUrl);
 
@@ -33,7 +33,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String turn = driver.findElement(By.className("turn")).getText();
         assertEquals("Player 1 make your move.", turn);
-    }
+}
 
 /*
     @Test
@@ -75,9 +75,9 @@ public class WebInterfaceTests extends SeleniumWrapper {
         assertEquals("X just won the game.", x);
     }
 
-*/
-    @Test
-    public void testNewGame() throws InterruptedException{
+ */
+@Test
+public void testNewGame() throws InterruptedException {
 
         driver.get(baseUrl);
 
@@ -90,10 +90,10 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.className("info")).getText();
         assertEquals("", x);
-    }
+}
 
-    @Test
-    public void testX() throws InterruptedException{
+@Test
+public void testX() throws InterruptedException {
 
         driver.get(baseUrl);
 
@@ -111,10 +111,10 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String x = driver.findElement(By.id("0")).getAttribute("class");
         assertEquals("X", x);
-    }
+}
 
-    @Test
-    public void testO() throws InterruptedException{
+@Test
+public void testO() throws InterruptedException {
 
         driver.get(baseUrl);
 
@@ -137,7 +137,7 @@ public class WebInterfaceTests extends SeleniumWrapper {
 
         String o = driver.findElement(By.id("1")).getAttribute("class");
         assertEquals("O", o);
-    }
+}
 
 /*
     @Test
@@ -248,5 +248,5 @@ public class WebInterfaceTests extends SeleniumWrapper {
         assertEquals("Draw!", x);
     }
 
-*/
+ */
 }

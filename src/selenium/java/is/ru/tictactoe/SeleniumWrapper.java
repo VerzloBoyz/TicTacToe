@@ -14,12 +14,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //import org.openqa.selenium.JavascriptExecutor;
 
 public class SeleniumWrapper {
-    static WebDriver driver;
-    static String baseUrl;
-    static String port;
+static WebDriver driver;
+static String baseUrl;
+static String port;
 
-    @BeforeClass
-    public static void before() {
+@BeforeClass
+public static void before() {
         System.setProperty("webdriver.gecko.driver", "/home/travis/build/VerzloBoyz/TicTacToe/geckodriver");
         driver = new FirefoxDriver();
         baseUrl = "https://tictactoe-staging-app.herokuapp.com/";
@@ -27,14 +27,14 @@ public class SeleniumWrapper {
         driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
         driver.get(baseUrl);
-    }
+}
 
-    @AfterClass
-    public static void after() {
+@AfterClass
+public static void after() {
         driver.close();
-    }
+}
 
-    void waitForLoad() throws InterruptedException {
-      Thread.sleep(2000);
-    }
+void waitForLoad() throws InterruptedException {
+        Thread.sleep(2000);
+}
 }
