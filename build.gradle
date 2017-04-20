@@ -13,28 +13,28 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco' // for code coverage
 
-mainClassName = "is.ru.tictactoe.WebInterface"
+mainClassName = "is.ru.tictactoe.ConsoleInterface"
 repositories {
     jcenter()
 }
-
+/*
 sourceSets {
     selenium
     seleniumXvfb
 }
-
+*/
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     compile 'com.sparkjava:spark-core:2.5'
 
     testCompile 'junit:junit:4.+'
 
-    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
-    seleniumCompile 'junit:junit:4.+'
-    //seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
+    // seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
+    // seleniumCompile 'junit:junit:4.+'
+    // seleniumCompile 'org.seleniumhq.selenium:selenium-firefox-driver:3.0.1'
 
-    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
-    seleniumXvfbCompile 'junit:junit:4.+'
+    // seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
+    // seleniumXvfbCompile 'junit:junit:4.+'
 
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
@@ -52,6 +52,7 @@ task stage {
     dependsOn installDist
 }
 
+/* 
 task selenium(type: Test, dependsOn: installDist) {
     testClassesDir = sourceSets.selenium.output.classesDir
     classpath = sourceSets.selenium.runtimeClasspath
@@ -72,6 +73,7 @@ task seleniumXvfb(type: Test, dependsOn: installDist) {
         'sh -e /etc/init.d/xvfb stop'.execute()
     }
 }
+*/
 
 // enable code coverage XML reports
 jacocoTestReport {

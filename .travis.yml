@@ -5,31 +5,28 @@ jdk:
 notifications:
   email:
     recipients:
-      - hjalti15@ru.is
-      - gunnarbb15@ru.is
-      - armann15@ru.is
 
     on_success: always
     on_failure: always
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: DBHOv/vSPUTIKCAswR3BX7gGancxkbDPM4ZyrfmademQAbY/dT+fhuePNcnZliO6KkzYVYyTUz9P91x5FzDD2Z7BgyGU51w:L3IdyRdZFYBZvUn1+7/KQEEgegjAIkgyhLPNN6+BObNiZqedGICjLMQwLCO2xQKesNZ+hkakf/vSnxOlSW4RE0V9IkgHq4yBI5Fm6bP5oId6q4smToHRi8cPoLoUqC2ASSfc/lDcZ8PYNGUudf4ythwWHDFM7fK2h9McFwpSDr4AdKSTNeiPMeI01AYVSuELBsDXFnWl3E8Wh/hi31pV5b43c5+i8ROgltY7cI4G9y8obupmEGWZllHbRFEs4wX3+muaGZnHqUENhgytNZ+Hx1dwyUNz3aSU52+cF+Y+NgD54HimdKRjdUcXx1okGNX+CTeCxl73pV3ptvCUvENHvwimwIQGfvjGd/GLZlCzW2eDPe4WFFxO/6x+/9pJ8+0PX1PA9Tv4SOfaGum/xYfjKd5UroUifrEl8cCbHiukkw6qXZ8GzOuEwb7hRqalqf1IWxgkYVEGveAM08dlej4z2i0HiYkJ3UhDV+Z/6X8pTYc/WRv9NIKdPTPMKnSCzgoEikEX99D434jS77IgLfrOvUT/erSgBHrL8booJIsAkzvfFJZr2gzjOpb/JVEXtE1oX/pyzo/EZ72I=
-  app: morning-anchorage-85972
+    # deploy:
+    # provider: heroku
+    # api_key:
+    # secure: DBHOv/vSPUTIKCAswR3BX7gGancxkbDPM4ZyrfmademQAbY/dT+fhuePNcnZliO6KkzYVYyTUz9P91x5FzDD2Z7BgyGU51w:L3IdyRdZFYBZvUn1+7/KQEEgegjAIkgyhLPNN6+BObNiZqedGICjLMQwLCO2xQKesNZ+hkakf/vSnxOlSW4RE0V9IkgHq4yBI5Fm6bP5oId6q4smToHRi8cPoLoUqC2ASSfc/lDcZ8PYNGUudf4ythwWHDFM7fK2h9McFwpSDr4AdKSTNeiPMeI01AYVSuELBsDXFnWl3E8Wh/hi31pV5b43c5+i8ROgltY7cI4G9y8obupmEGWZllHbRFEs4wX3+muaGZnHqUENhgytNZ+Hx1dwyUNz3aSU52+cF+Y+NgD54HimdKRjdUcXx1okGNX+CTeCxl73pV3ptvCUvENHvwimwIQGfvjGd/GLZlCzW2eDPe4WFFxO/6x+/9pJ8+0PX1PA9Tv4SOfaGum/xYfjKd5UroUifrEl8cCbHiukkw6qXZ8GzOuEwb7hRqalqf1IWxgkYVEGveAM08dlej4z2i0HiYkJ3UhDV+Z/6X8pTYc/WRv9NIKdPTPMKnSCzgoEikEX99D434jS77IgLfrOvUT/erSgBHrL8booJIsAkzvfFJZr2gzjOpb/JVEXtE1oX/pyzo/EZ72I=
+    # app: morning-anchorage-85972
 
-before_script:
-    - "wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz"
-    - "tar xvfs geckodriver-v0.11.1-linux64.tar.gz"
-    - "pwd"
-    - "ls"
-    - "chmod 777 bin/xvfb"
-    - "export DISPLAY=:99.0"
-    - "sh -e /etc/init.d/xvfb start"
-    - sleep 3
-
+  # before_script:
+  #  - "wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz"
+  #  - "tar xvfs geckodriver-v0.11.1-linux64.tar.gz"
+  #  - "pwd"
+  #  - "ls"
+  #  - "chmod 777 bin/xvfb"
+  #  - "export DISPLAY=:99.0"
+  #  - "sh -e /etc/init.d/xvfb start"
+  #  - sleep 3
+    
 before_install:
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+    # - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
   - pip install --user codecov
 
 script:
@@ -37,7 +34,7 @@ script:
     - ./gradlew check
     - ./gradlew jacocTestReport
     - ./gradlew build
-    - ./gradlew seleniumXvfb --info
+  # - ./gradlew seleniumXvfb --info
 
 branches:
   only:
@@ -46,8 +43,8 @@ branches:
 after_success:
     - codecov
 
-after_failure:
-    - "cat /home/travis/build/VerzloBoyz/TicTacToe/build/reports/tests/seleniumXvfb/index.html"
-    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html"
-    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html#classMethod"
-    - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/packages/is.ru.tictactoe.html"
+# after_failure:
+    # - "cat /home/travis/build/VerzloBoyz/TicTacToe/build/reports/tests/seleniumXvfb/index.html"
+    # - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html"
+    # - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/classes/is.ru.tictactoe.WebInterfaceTests.html#classMethod"
+    # - "cat /home/travis/build/VerzloBoyx/TicTacToe/build/reports/tests/seleniumXvfb/packages/is.ru.tictactoe.html"
